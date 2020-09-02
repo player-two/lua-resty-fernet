@@ -32,7 +32,7 @@ local function pack_int(int, n)
     return string.char(0):rep(n)
   end
 
-  bytes = ""
+  local bytes = ""
   for i = n * 6, 0, -8 do
     bytes = bytes .. string.char(bit.rshift(int, i) % 256)
   end
